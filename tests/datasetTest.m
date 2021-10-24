@@ -89,12 +89,15 @@ for genIdx = 1 : length(dataGens)  % For each data generation
                         
                 nFoldersHere = nFoldersHere + 1;  % Increment counter
                 
-            else  % If sub-folder does not exist
-                fprintf("\tFAILURE: folder /%s%s/ doesn't exist.\n",...
+            else 
+            
+            % If sub-folder does not exist
+                fprintf('\tFAILURE: folder /%s%s/ does not exist.\n',...
                             thisDir, dataTypes{typeIdx});
             end      
         end
-    else  % If the generation folder does not exist
+    else  
+    % If the generation folder does not exist
         fprintf('\tFAILURE: folder /%s does not exist.\n', ...
                         thisDir);
     end
@@ -127,7 +130,8 @@ for genIdx = 1 : length(dataGens)  % For each generation
             
             fprintf('\tSuccess! %s exists.\n', filePath);
             
-        else  % If the file does not exist
+        else  
+        % If the file does not exist
             fprintf('\tFAILURE: %s does not exist.\n', filePath);
         end 
     end
